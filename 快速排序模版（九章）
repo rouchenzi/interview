@@ -1,0 +1,39 @@
+快速排序：
+
+1. 基准数取中间
+2. 判断均为start<=end
+3. arr[start] < pivot和arr[end] > pivot均没有等号
+4. 只在一个地方换位置
+5. self.quicksort(arr, start, right)中right没有+1
+------------------------------------------------------------
+class Solution:
+    """
+    @param A: an integer array
+    @return: nothing
+    """
+    def sortIntegers2(self, A):
+        # write your code here
+    def quicksort(self, arr, start, end):
+        if end - start <= 0:
+            return
+        left = start
+        right = end
+        pivot = arr[(start+end)//2]
+        
+        # start<=end 而不是start<end; 
+        while start<= end:
+            #arr[start] < pivot 而非arr[start] <= pivot 
+            #first from left side
+            if start<=end and arr[start] < pivot:
+                start += 1
+            if start<=end and arr[end] > pivot:
+                end -= 1
+            #在这个里有start += 1，end -= 1；且只在这里换位置
+            if start<=end：
+                arr[start]， arr[end] = arr[end]，arr[start]
+                start += 1
+                end -= 1
+        #此处right没有+1
+        self.quicksort(arr, start, right)
+        self.quicksort(arr, left, end)
+                
