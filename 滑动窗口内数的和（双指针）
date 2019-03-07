@@ -1,0 +1,33 @@
+问题：给你一个大小为n的整型数组和一个大小为k的滑动窗口，将滑动窗口从头移到尾，输出从开始到结束每一个时刻滑动窗口内的数的和。
+思路：每滑动一次就是减去前一个数，加上后一个数
+注意的问题：for循环中的边界条件
+
+---------------------------------------------------------------------------------------------------------------------
+class Solution:
+    """
+    @param nums: a list of integers.
+    @param k: length of window.
+    @return: the sum of the element inside the window at each moving.
+    """
+    def winSum(self, nums, k):
+        if k <= 0:
+        #return []而不是-1
+            return []
+            
+        if nums == []:
+            return []
+            
+        sum_k = sum([i for i in nums[0:k]])
+        result = [sum_k]
+        #p1和p2差k+1
+        p1 = 0
+        p2 = p1 + k 
+        #用p2做边界
+        while p2 <= len(nums)-1:
+            sum_k = sum_k + nums[p2] - nums[p1] 
+            
+            result.append(sum_k)
+            p1 += 1
+            p2 += 1
+        
+        return result
