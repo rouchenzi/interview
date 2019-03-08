@@ -32,7 +32,7 @@
 #### 9. 模型评价
 #### 10. attention
 #### 11. image captioning
-#### [12. 梯度消失与梯度爆炸]（https://github.com/rouchenzi/interview/blob/master/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8Cpooling%E5%B1%82%EF%BC%8C%E5%85%A8%E8%81%94%E6%8E%A5%E5%B1%82）
+#### 12. 梯度消失与梯度爆炸
 #### [13.神经网络的layer](https://github.com/rouchenzi/interview/blob/master/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8Cpooling%E5%B1%82%EF%BC%8C%E5%85%A8%E8%81%94%E6%8E%A5%E5%B1%82)
 #### 要figure out自己的模型出现问题的原因，解决的办法和为什么用这个办法
 ----------------------------------------------------------
