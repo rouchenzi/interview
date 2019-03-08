@@ -1,0 +1,32 @@
+问题：找链表的中点（如果长度是偶数，则返回中间偏左的节点的值。）
+思路：使用快慢指针，慢指针 starts from head, 快指针start from head.next; 慢指针每走一步，快指针走两步；当慢指针走到中点时，快指针走到最后一个数
+注意边界条件：(1)while 快指针 != None and 快指针.next != None (2)注意有单双数，单数时，慢指针走到中点，快指针走到了最后一个数；双数时，慢指针走到中点，快指针走到第一个None; 因此判断条件应该为（1）
+
+code
+---------------------------------------------------------------------------
+"""
+Definition of ListNode
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+"""
+
+class Solution:
+    """
+    @param head: the head of linked list.
+    @return: a middle node of the linked list
+    """
+    def middleNode(self, head):
+        # write your code here
+        if head is None:
+            return None
+        
+        p1 = head
+        p2 = head.next
+        #注意边界条件
+        while p2 != None and p2.next != None:
+            p1 = p1.next
+            p2 = p2.next.next
+        
+        return p1
