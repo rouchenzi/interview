@@ -9,16 +9,12 @@
 [寻找数组中重复的数](https://github.com/rouchenzi/interview/blob/master/%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0)
 [最大连续子数组的和](https://github.com/rouchenzi/interview/blob/master/%E5%89%91%E6%8C%87%20offer%EF%BC%9A%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C)
 [滑动窗口内数的和](https://github.com/rouchenzi/interview/blob/master/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E5%86%85%E6%95%B0%E7%9A%84%E5%92%8C%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89)
-
-     
-     
-     
-     
-     
-     
-     
 #### lintcode：
 #### 面经中常出现的题：
+[寻找链表中点](https://github.com/rouchenzi/interview/blob/master/%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%AF%BB%E6%89%BE%E4%B8%AD%E7%82%B9%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89)
+
+
+
 ----------------------------------------------------------
 ## 自己项目中的知识点
 #### 1. ResNet and Inception系列(特点，各个系列的改进，参数大小，网络深度宽度，有什么特殊的层)
@@ -32,7 +28,7 @@
 #### 9. 模型评价
 #### 10. attention
 #### 11. image captioning
-#### 12. 梯度消失与梯度爆炸
+#### [12. 梯度消失与梯度爆炸](https://github.com/rouchenzi/interview/blob/master/%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E4%B8%8E%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8)
 #### [13.神经网络的layer](https://github.com/rouchenzi/interview/blob/master/%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%8Cpooling%E5%B1%82%EF%BC%8C%E5%85%A8%E8%81%94%E6%8E%A5%E5%B1%82)
 #### 要figure out自己的模型出现问题的原因，解决的办法和为什么用这个办法
 ----------------------------------------------------------
