@@ -4,7 +4,7 @@ lintcode：
 -------------------------------------------------------------------------
 思路：❤️（1）本题没用哈希表（2）当前层：newRoot = TreeNode(root.val), newRoot.left = cloneTree(root.left), newRoot.right = cloneTree(root.right)[递归函数名：cloneTree]，返回newRoot
 
-
+❓扩展：图上的点；树节点；链表节点的深度复制（是否只有图上的节点需要先克隆点再克隆关系；其他两种只能通过点之间的关系来找到点，所以不需要hash表先存各个节点再存关系？）
 
 
 
