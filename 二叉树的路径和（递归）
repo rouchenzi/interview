@@ -1,0 +1,11 @@
+问题：给定一个二叉树，找出所有路径中各节点相加总和等于给定目标值的路径。（一个有效的路径，指的是从根节点到叶节点的路径。）
+---------------------------------------------------------------------------------------------------
+lintcode：https://www.lintcode.com/problem/binary-tree-path-sum/description?_from=ladder&&fromId=6
+---------------------------------------------------------------------------------------------------
+思路：（1）注意有效路径的含义：从根节点到叶节点（2）一层递归：需要传入的（1.记录有效路径节点的数组 2.记录节点和的value）；首先record.append(root.val); val = root.val+val，若val == target且root.left is None and root.right is None,则result.append[record];
+否则继续递归；在本层最后record.pop()
+
+
+
+
+
