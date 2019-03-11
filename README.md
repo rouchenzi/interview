@@ -6,15 +6,26 @@
 [二分法模版](https://github.com/rouchenzi/interview/blob/master/%E4%BA%8C%E5%88%86%E6%B3%95%E6%A8%A1%E7%89%88%EF%BC%88%E4%B9%9D%E7%AB%A0%EF%BC%89)
 
 [快速排序模版](https://github.com/rouchenzi/interview/blob/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%E6%A8%A1%E7%89%88%EF%BC%88%E4%B9%9D%E7%AB%A0%EF%BC%89)
+
+[二叉树的前序遍历，中序遍历，后序遍历](https://github.com/rouchenzi/interview/blob/master/%E7%BB%8F%E5%85%B8%E9%A2%98%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%8C%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%EF%BC%8C%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86)
+
+
 #### 剑指 offer
-[寻找数组中重复的数(排序/特殊)](https://github.com/rouchenzi/interview/blob/master/%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0(%E6%8E%92%E5%BA%8F%26%E5%93%88%E5%B8%8C%E8%A1%A8%26%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95))
+[排序：寻找数组中重复的数(特殊解法)](https://github.com/rouchenzi/interview/blob/master/%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0(%E6%8E%92%E5%BA%8F%26%E5%93%88%E5%B8%8C%E8%A1%A8%26%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95))
 
-[最大连续子数组的和(动态规划)](https://github.com/rouchenzi/interview/blob/master/%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C(%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92))
+[动态规划：最大连续子数组的和](https://github.com/rouchenzi/interview/blob/master/%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C(%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92))
 
-[滑动窗口内数的和(同向双指针)](https://github.com/rouchenzi/interview/blob/master/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E5%86%85%E6%95%B0%E7%9A%84%E5%92%8C%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89)
+[双指针（同向）：滑动窗口内数的和](https://github.com/rouchenzi/interview/blob/master/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E5%86%85%E6%95%B0%E7%9A%84%E5%92%8C%EF%BC%88%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%89)
 
-[前序遍历和中序遍历树构造二叉树(二叉树递归)](https://github.com/rouchenzi/interview/blob/master/%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91(%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92))
-[爬楼梯(动态规划)](https://github.com/rouchenzi/interview/blob/master/%E7%88%AC%E6%A5%BC%E6%A2%AF)
+[二叉树DFS:前序遍历和中序遍历树构造二叉树](https://github.com/rouchenzi/interview/blob/master/%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86%E5%92%8C%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E4%BA%8C%E5%8F%89%E6%A0%91(%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92))
+
+[动态规划：爬楼梯](https://github.com/rouchenzi/interview/blob/master/%E7%88%AC%E6%A5%BC%E6%A2%AF)
+
+[二叉树DFS:二叉树路径和](https://github.com/rouchenzi/interview/blob/master/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%B7%AF%E5%BE%84%E5%92%8C%EF%BC%88%E9%80%92%E5%BD%92%EF%BC%89)
+
+[二叉树DFS:克隆二叉树（未用哈希表）](https://github.com/rouchenzi/interview/blob/master/%E5%85%8B%E9%9A%86%E4%BA%8C%E5%8F%89%E6%A0%91%EF%BC%88%E9%80%92%E5%BD%92%26%E6%9C%AA%E7%94%A8%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%89)
+
+
 
 
 
