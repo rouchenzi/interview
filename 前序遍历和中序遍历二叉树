@@ -1,0 +1,9 @@
+问题：根据前序遍历和中序遍历树构造二叉树.
+---------------------------------------------------------------------------------------------------------------
+lintcode:https://www.lintcode.com/problem/construct-binary-tree-from-preorder-and-inorder-traversal/description?_from=ladder&&fromId=6
+---------------------------------------------------------------------------------------------------------------
+思路：1.利用前序遍历第一个元素是二叉树的根的特点，找到根元素；2.在中序遍历中找到根元素的索引，索引的左侧是左子树所有节点，右侧是右子树所有节点。
+2.递归
+result.append(root.val)
+root.left = tranverse(self, preorder[1:root+1], inorder[:root])
+root.right = tranverse(self, preorder[root+1:], inorder[root+1:])
