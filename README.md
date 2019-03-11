@@ -11,6 +11,8 @@
 
 
 #### 剑指 offer
+[快速排序: 第k大元素](https://github.com/rouchenzi/interview/blob/master/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F%EF%BC%9A%E7%AC%ACk%E5%A4%A7%E5%85%83%E7%B4%A0)
+
 [排序：寻找数组中重复的数(特殊解法)](https://github.com/rouchenzi/interview/blob/master/%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0(%E6%8E%92%E5%BA%8F%26%E5%93%88%E5%B8%8C%E8%A1%A8%26%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95))
 
 [动态规划：最大连续子数组的和](https://github.com/rouchenzi/interview/blob/master/%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C(%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92))
