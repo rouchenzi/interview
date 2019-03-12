@@ -1,0 +1,8 @@
+问题： 翻转一个链表
+lintcode: https://www.lintcode.com/problem/reverse-linked-list/solution?_from=ladder&&fromId=6
+思路：1.四个交换：
+      （1）temp = head.next#把下一个节点存到temp
+      （2）head.next = cur#把下个节点指向原本的节点节点
+      （3）cur = head#把现在的节点设为下一个节点的前节点
+      （4）head = temp#节点向后走一位
+     2.注意：开始时设施cur = None；边界条件为while head != None
