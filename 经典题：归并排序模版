@@ -1,1 +1,17 @@
-1.相较于快速排序，会额外花费O(n)的空间（开辟删除空间对时间的耗费也很大）
+1. 相较于快速排序，会额外花费O(n)的空间（开辟删除空间对时间的耗费也很大）
+思路：1. 结构: 调用mergesort(start, end, A),然后分为左右部分，分别再mergesort,最后调用merge(start, end, arr)。递归的是mergesort
+2. 需要注意的bug点：
+  (1)mergesort(mid+1, end, arr)，test case: [1,2]
+  (2)需要在merge中有个temp数组存排序好的元素，在付给arr，注意赋值时的index对应
+
+
+
+
+
+
+
+
+
+
+
+
