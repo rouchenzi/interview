@@ -1,0 +1,13 @@
+问题：实现一个栈, 支持以下操作:
+                          push(val) 将 val 压入栈
+                          pop() 将栈顶元素弹出, 并返回这个弹出的元素
+                          min() 返回栈中元素的最小值
+                          要求 O(1) 开销.
+
+lintcode:https://www.lintcode.com/problem/min-stack/description?_from=ladder&&fromId=6
+
+思路：
+1.使用两个队列A,B；A用来记录所有元素，B 用来记录最小元素 
+2.push函数：直接用A.append(number)将元素压入栈，同时若B为空（即最开始的时候）或者number >= B[-1]时需要用B.append(number)将此元素记录到B中（记住有等于，e.g.[2,3,4,2,2]，若只记录一个2，那弹出最后一个2时，B中已经没有元素）
+3.pop函数：使用A.pop()弹出，同时判断是否这个弹出的值为B队列中最后一个值，若是，则弹出相应B[-1]
+4.min函数：返回B中最后一个元素即可
