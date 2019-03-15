@@ -1,0 +1,10 @@
+问题：给出一个字符串，找出第一个只出现一次的字符。
+
+lintcode：https://www.lintcode.com/problem/first-unique-character-in-a-string/description?_from=ladder&&fromId=6
+
+思路：
+1.本题较为简单，直接将元素与出现次数存入hash表即可
+2.循环字符串可以用： for s in str 
+3.参考答案中用了 hashmap.get(s,0)，此写法可以学习；get是python中dict的一个属性，得到dict中指定键的值，如果不存在时返回用户自己设的默认值(原本为None），在此参考答案中处将默认值设为0意为此字符串尚未出现
+
+
