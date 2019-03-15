@@ -1,0 +1,72 @@
+题目：将两个排序链表合并为一个新的排序链表
+
+------------------------------------------------------
+lintcode：https://www.lintcode.com/problem/merge-two-sorted-lists/description?_from=ladder&&fromId=6
+------------------------------------------------------
+
+思路：
+1.本题较为简单，直接使用归并排序的算法
+
+code：
+------------------------------------------------------
+"""
+Definition of ListNode
+class ListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+"""
+
+class Solution:
+    """
+    @param l1: ListNode l1 is the head of the linked list
+    @param l2: ListNode l2 is the head of the linked list
+    @return: ListNode head of linked list
+    """
+    def mergeTwoLists(self, l1, l2):
+        # write your code here
+        if l1 == None and l2 == None:
+            return None
+        if l1 == None:
+            return l2
+        if l2 == None:
+            return l1
+        
+        node = ListNode(0)
+        start = node
+        p1 = l1
+        p2 = l2
+        while p1 != None and p2 != None:
+            if p1.val <= p2.val:
+                start.next = p1
+                p1 = p1.next
+            else:
+                start.next = p2
+                p2 = p2.next
+            start = start.next
+            
+            
+        while p1 != None:
+            start.next = p1
+            p1 = p1.next
+            start = start.next
+            
+        while p2 != None:
+            start.next = p2
+            p2 = p2.next
+            start = start.next
+            
+        start.next = None
+        
+        return node.next
+        
+        
+        
+            
+            
+        
+            
+        
+                
+        
+                
