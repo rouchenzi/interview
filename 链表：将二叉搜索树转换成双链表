@@ -1,0 +1,68 @@
+问题：将一个二叉查找树按照中序遍历转换成双向链表。
+---------------------------------------------------------------------
+lintcode：https://www.lintcode.com/problem/convert-binary-search-tree-to-doubly-linked-list/description?_from=ladder&&fromId=6
+---------------------------------------------------------------------
+思路：
+1.首先使用中序遍历将查找二叉树转换为list（通过中序遍历查找二叉树得到一个升序数组，root在数组中间）
+2.使用dummy node建立linkedlist
+
+知识点：
+1.二叉搜索树（BST）：
+    （1） 空树
+    （2） <1>若左子树不空，则左子树上所有的节点都小于等于根节点
+         <2>若右子树不空，则右子树上所有的节点都小于等于根节点
+         <3>左右子树也都是二叉搜索树
+2.dummy node作用：又称作哨兵节点，一般不存储任何有实际意义的值，通常用来占位（？），或作为链表的虚表头；比如很多的链表问题，会在链表头前加一个dummy node，指向next.head,方便删除head或在head前进行插入等操作
+
+
+
+code:
+---------------------------------------------------------------------
+
+"""
+Definition of Doubly-ListNode
+class DoublyListNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = self.prev = nextDefinition of TreeNode:
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left, self.right = None, None
+"""
+
+class Solution:
+    """
+    @param root: The root of tree
+    @return: the head of doubly list node
+    """
+    def bstToDoublyList(self, root):
+        # write your code here
+        result = []
+        self.inorder(root, result)
+        
+        return self.doubleList(result)
+    
+    def inorder(self, root, result):
+        if root == None:
+            return 
+            
+        self.inorder(root.left, result)
+        result.append(root.val)
+        self.inorder(root.right, result)
+        
+    def doubleList(self, result):
+        temp = DoublyListNode(0)
+        start = temp
+        for i in range(len(result)):
+            node = DoublyListNode(result[i])
+            temp.next = node
+            node.prev = temp
+            temp = temp.next
+        
+        return start.next
+        
+        
+        
+        
+
