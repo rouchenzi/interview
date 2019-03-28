@@ -6,6 +6,31 @@ lintcode：
 
 ❓扩展：图上的点；树节点；链表节点的深度复制（是否只有图上的节点需要先克隆点再克隆关系；其他两种只能通过点之间的关系来找到点，所以不需要hash表先存各个节点再存关系？）
 
+代码：
+class Solution:
+    """
+    @param root: The root of binary tree
+    @return: root of new tree
+    """
+    def cloneTree(self, root):
+        # write your code here
+        if root is None:
+            return None
+        
+        root_new = self.cloneNone(root)
+        
+        return root_new
+        
+    def cloneNone(self, node):
+        if node is None:
+            return None
+            
+        node_new = TreeNode(node.val)
+        node_new.left = self.cloneNone(node.left)
+        node_new.right = self.cloneNone(node.right)
+        
+        return node_new
+            
 
 
 
