@@ -1,0 +1,58 @@
+问题：正如标题所述，你需要使用两个栈来实现队列的一些操作。队列应支持push(element)，pop() 和 top()，其中pop是弹出队列中的第一个(最前面的)元素。pop和top方法都应该返回第一个元素的值。
+
+思路：
+（1）push:append函数，push到stack1
+（2）pop：当stack2不为空的时候，将stack1中的元素全部pop到stack2中；最后stack2.pop()
+（3）top：与pop同理，只是return stack2[-1]即可
+
+值得注意的是，此方法比之前的改进是：
+每一次pop/top完，不需要再把stack2中的元素pop回stack1中，而是直到stack2为空，再从stack1中pop，也保证了stack2始终弹出的是最前面的元素；节省了时间
+
+代码：
+class MyQueue:
+    
+    def __init__(self):
+        # do intialization if necessary
+        self.stack1 = []
+        self.stack2 = []
+    """
+    @param: element: An integer
+    @return: nothing
+    """
+    def push(self, element):
+        # write your code here
+        self.stack1.append(element)
+    """
+    @return: An integer
+    """
+    def pop(self):
+        # write your code here
+        if not self.stack2:
+            while len(self.stack1) != 0:
+                self.stack2.append(self.stack1.pop())
+        return self.stack2.pop()
+    """
+    @return: An integer
+    """
+    def top(self):
+        # write your code here
+        if not self.stack2:
+            while len(self.stack1) != 0:
+                self.stack2.append(self.stack1.pop())
+        return self.stack2[len(self.stack2)-1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
