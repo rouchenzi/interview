@@ -1,0 +1,23 @@
+问题：给定一个链表，删除链表中倒数第n个节点，返回链表的头节点。
+
+时间复杂度：O(n)
+
+思路：使用双指针。先将一个指针走到第n个节点，此时开始移动第二个指针，两个指针每一次循环都走1步，当第一个指针指向none,第二个指针刚好到达倒数第n+1个节点，将它的下一个指针指向下下一个，直接删除倒数第n个节点
+
+
+def removeNthFromEnd(self, head, n):
+        # write your code here
+        pointer = ListNode(0)
+        pointer.next = head
+        pointer_sec = pointer
+
+        for _ in range(n):
+            head = head.next
+        
+        while head != None:
+            head = head.next
+            pointer_sec = pointer_sec.next
+        
+        pointer_sec.next = pointer_sec.next.next
+        
+        return pointer.next
