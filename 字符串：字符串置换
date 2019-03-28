@@ -1,0 +1,19 @@
+问题：
+
+思路：两个字符串分别排序，比较是否相等
+
+代码
+
+class Solution:
+    """
+    @param A: a string
+    @param B: a string
+    @return: a boolean
+    """
+    def Permutation(self, A, B):
+        # write your code here
+           
+        A = sorted(A)
+        B = sorted(B)
+        
+        return A==B
