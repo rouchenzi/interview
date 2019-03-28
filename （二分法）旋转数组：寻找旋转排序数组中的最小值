@@ -1,0 +1,42 @@
+问题：寻找旋转排序数组中的最小值
+
+思路：使用二分法；本是升序数组，调换位置后会发生前一段的任何一个数都大于后一段的数的情况，使用二分法找到并缩小这个区间。使用start，end，mid，如果nums[mid]>nums[end]，那么说明在mid-end区间，否则在start-mid的区间；以此循环
+
+注意：边界条件：start + 1 < end 
+
+
+代码：
+
+class Solution:
+    """
+    @param nums: a rotated sorted array
+    @return: the minimum number in the array
+    """
+    def findMin(self, nums):
+        if not nums:
+            return None
+        # write your code here
+        left, right = 0, len(nums)-1
+        start, end = left, right 
+        target = nums[0]
+        while start+1 < end:
+            mid = (start + end ) // 2
+            if target < nums[mid]:
+                start = mid
+            else:
+                end = mid
+        
+        if nums[start] > nums[end]:
+            min_number = nums[end]
+        else:
+            min_number = nums[start]
+        
+        if min_number < nums[left]:
+            return min_number
+        return nums[left]
+
+
+
+
+
+
