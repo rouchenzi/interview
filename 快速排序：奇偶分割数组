@@ -1,0 +1,24 @@
+问题：分割一个整数数组，使得奇数在前偶数在后。
+
+时间复杂度：O(n)?
+
+思路：一轮快速排序：左右指针分别始于开始和结尾，当左指针小于右指针的时候且左指针指向的元素值为奇数，左指针右移，直到出现偶数；此时向左移动移动右指针，直到遇到奇数；此时交换左右指针指向的元素。直到左右指针相等。
+
+def partitionArray(self, nums):
+        # write your code here
+        if not nums:
+            return None;
+        
+        pointer_1, pointer_2 = 0, len(nums)-1
+        
+        while pointer_1 < pointer_2:
+            while pointer_1 < pointer_2 and nums[pointer_1] % 2 == 1:
+                pointer_1 += 1
+            while pointer_1 < pointer_2 and nums[pointer_2] % 2 == 0:
+                pointer_2 -= 1
+                
+            if pointer_1 < pointer_2:
+                nums[pointer_1], nums[pointer_2] = nums[pointer_2], nums[pointer_1]
+                pointer_1 += 1
+                pointer_2 -= 1
+                
