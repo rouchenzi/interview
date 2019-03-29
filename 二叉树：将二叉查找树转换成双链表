@@ -1,0 +1,36 @@
+问题：将一个二叉查找树按照中序遍历转换成双向链表
+
+思路：先使用中序遍历将二叉树的节点存入数组中，然后使用doublylistnode建立dummy点，将数组中的数存入链表
+
+代码：
+class Solution:
+    """
+    @param root: The root of tree
+    @return: the head of doubly list node
+    """
+    def bstToDoublyList(self, root):
+        # write your code here
+        result = []
+        self.inorder(root, result)
+        
+        return self.doubleList(result)
+    
+    def inorder(self, root, result):
+        if root == None:
+            return 
+            
+        self.inorder(root.left, result)
+        result.append(root.val)
+        self.inorder(root.right, result)
+        
+    def doubleList(self, result):
+        temp = DoublyListNode(0)
+        start = temp
+        for i in range(len(result)):
+            node = DoublyListNode(result[i])
+            temp.next = node
+            node.prev = temp
+            temp = temp.next
+        
+        return start.next
+        
