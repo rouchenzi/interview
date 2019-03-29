@@ -4,7 +4,48 @@
   (1)mergesort(mid+1, end, arr)，test case: [1,2]
   (2)需要在merge中有个temp数组存排序好的元素，在付给arr，注意赋值时的index对应
 
-
+代码：
+class Solution:
+    """
+    @param A: an integer array
+    @return: nothing
+    """
+    def sortIntegers2(self, A):
+        
+        self.mergeSort(0, len(A) - 1, A)
+    
+    def mergeSort(self, start, end, arr):
+        if start >= end:
+            return 
+        mid = (start + end) // 2
+        self.mergeSort(start, mid, arr)
+        self.mergeSort(mid+1, end, arr)
+        self.merge(start, end , arr)
+        
+    def merge(self, start, end, arr):
+        mid = (start+end) // 2
+        left, right = start, mid + 1
+        temp = []
+        while left <=mid and right <= end:
+            if arr[left] < arr[right]:
+                temp.append(arr[left])
+                left += 1
+            else:
+                temp.append(arr[right])
+                right += 1
+            
+        while left <= mid:
+            temp.append(arr[left])
+            left += 1
+            
+        while right <= end:
+            temp.append(arr[right])
+            right += 1
+        
+        count = 0
+        for i in range(start,end+1):
+            arr[i] = temp[count]
+            count += 1
 
 
 
