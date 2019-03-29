@@ -1,0 +1,18 @@
+问题：判断单链表是否带环
+
+思路：快慢指针；快指针每次走两步，慢指针每次走一步，如果最后能相遇，那么说明是个带环链表。
+
+
+代码：
+
+
+fast=pHead
+ 
+slow=pHead
+ 
+while fast!=slow: 
+  if fast.next!=null&& fast.next.next!=null:
+    fast=fast.next.next
+    slow=slow.next
+else:
+    return None
